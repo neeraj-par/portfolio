@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --shadow-card: 0 1px 0 rgba(34, 31, 26, 0.05), 0 14px 26px -18px rgba(34, 31, 26, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: repeating-linear-gradient(rgba(34, 31, 26, 0.05) 0 1px, transparent 1px 30px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: #c15e3d;
+  color: #fff;
+}
+
+.card {
+  background: #fbf8f0;
+  border: 1px solid rgba(34, 31, 26, 0.14);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-card);
+}
+
+.dashed-rule {
+  border-top: 1px dashed rgba(34, 31, 26, 0.25);
+}
+
+.tag-chip {
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 10.5px;
+  padding: 4px 10px;
+  border: 1px dashed rgba(34, 31, 26, 0.3);
+  border-radius: 999px;
+  color: #5b564a;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.tag-chip .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: #c15e3d;
+  flex-shrink: 0;
+}
+
+.tape {
+  position: absolute;
+  width: 50px;
+  height: 16px;
+  background: #eac7bc;
+  opacity: 0.85;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+}
+
+.section-eyebrow {
+  font-family: var(--font-caveat), cursive;
+  font-size: 22px;
+  color: #c15e3d;
+  margin: 0;
+}
+
+.section-title {
+  font-family: var(--font-sora), sans-serif;
+  font-weight: 800;
+  font-size: clamp(26px, 4vw, 36px);
+  margin: 2px 0 8px;
+}
