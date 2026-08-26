@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { profile } from "@/lib/content";
 import SectionHead from "./ui/SectionHead";
 import Reveal from "./ui/Reveal";
+import Squiggle from "./ui/Squiggle";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -47,14 +48,7 @@ export default function Contact() {
         <div className="mx-auto mb-9 max-w-xl text-center md:mb-14">
           <p className="section-eyebrow">Let&apos;s Create</p>
           <h2 className="section-title inline-block">Let&apos;s build something.</h2>
-          <svg className="mx-auto block h-2.5 w-full max-w-[220px]" viewBox="0 0 220 10" fill="none">
-            <path
-              d="M2 6 Q 20 1 38 6 T 74 6 T 110 6 T 146 6 T 182 6 T 218 6"
-              stroke="#C15E3D"
-              strokeWidth={3}
-              strokeLinecap="round"
-            />
-          </svg>
+          <Squiggle className="mx-auto" />
           <p className="mx-auto mt-2.5 max-w-[320px] font-caveat text-xl leading-snug text-ink-soft">Drop me a line. I usually reply the same day.</p>
         </div>
 
@@ -86,7 +80,8 @@ export default function Contact() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="card card-hover mobile-card min-w-0 p-5 pb-6 md:w-auto md:p-7">
+          <form onSubmit={handleSubmit} className="card card-hover mobile-card relative min-w-0 rotate-[0.5deg] p-5 pb-6 md:w-auto md:p-7">
+            <span className="tape left-1/2 top-[-9px] -translate-x-1/2 rotate-[3deg]" />
             <Field id="name" label="Name" placeholder="Your full name" />
             <Field id="email" label="Email" type="email" placeholder="you@example.com" />
             <Field id="subject" label="Subject" placeholder="What's this about?" />
