@@ -13,22 +13,22 @@ const TL_ICONS = [
 
 export default function Story() {
   return (
-    <section id="story" className="py-[76px]">
-      <div className="mx-auto max-w-[1080px] px-7">
+    <section id="story" className="section-pad">
+      <div className="mx-auto max-w-[1120px] px-5 md:px-7">
         <SectionHead
           eyebrow="The Story So Far"
           title="The Story So Far"
           subtitle="Roles, releases and the road that shaped how I build."
         />
 
-        <div className="mx-auto max-w-[760px]">
+        <div className="mx-auto max-w-[820px]">
           <Reveal>
-            <div className="card mb-9 p-7">
-              <div className="font-sora text-lg font-bold">
-                {roleHeader.role} <span className="font-normal text-accent">— {roleHeader.org}</span>
+            <div className="card card-hover mobile-card mb-7 p-5 md:mb-10 md:w-auto md:p-7">
+              <div className="font-sora text-[16px] font-bold md:text-lg">
+                {roleHeader.role} <span className="font-normal text-accent">at {roleHeader.org}</span>
               </div>
               <div className="mt-0.5 font-mono text-xs text-ink-faint">{roleHeader.date}</div>
-              <p className="mt-3 text-[14.5px] text-ink-soft">{roleHeader.summary}</p>
+              <p className="mt-3 text-[13.5px] leading-relaxed text-ink-soft md:text-[14.5px]">{roleHeader.summary}</p>
             </div>
           </Reveal>
 
@@ -36,7 +36,7 @@ export default function Story() {
             <div className="absolute bottom-0 left-[18px] top-0 border-l-2 border-dashed border-black/[0.14]" />
 
             {timeline.map((item, i) => (
-              <Reveal key={item.title} delay={i * 0.1} className="relative mb-8 pl-[52px] last:mb-0">
+              <Reveal key={item.title} delay={i * 0.1} className="relative mb-6 pl-[44px] last:mb-0 md:mb-8 md:pl-[56px]">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   className="absolute left-1.5 top-0.5 flex h-[26px] w-[26px] items-center justify-center rounded-full border-2 border-accent bg-card"
@@ -45,9 +45,11 @@ export default function Story() {
                     {TL_ICONS[i % 3]}
                   </svg>
                 </motion.div>
-                <div className="font-sora text-[16px] font-semibold">{item.title}</div>
+                <div className="card card-hover p-5 md:p-6">
+                <div className="font-sora text-[15px] font-semibold md:text-[16px]">{item.title}</div>
                 <div className="my-1 font-mono text-[11.5px] text-ink-faint">{item.date}</div>
-                <p className="text-[14px] text-ink-soft">{item.description}</p>
+                <p className="text-[13.5px] leading-relaxed text-ink-soft md:text-[14.5px]">{item.description}</p>
+                </div>
               </Reveal>
             ))}
           </div>
