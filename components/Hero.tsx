@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { profile, heroNote } from "@/lib/content";
 import { StarDoodle, TargetDoodle } from "./ui/Doodles";
+import Squiggle from "./ui/Squiggle";
 
 export default function Hero() {
   return (
@@ -32,8 +33,9 @@ export default function Hero() {
               {profile.name}
             </h1>
 
-            <span className="inline-block font-caveat text-[19px] font-bold text-accent underline decoration-accent/40 decoration-2 underline-offset-[6px] md:text-[24px]">
+            <span className="inline-block font-caveat text-[19px] font-bold text-accent md:text-[24px]">
               {profile.role}
+              <Squiggle className="mx-auto mt-0.5 !max-w-none md:mx-0" />
             </span>
 
             <p className="mx-auto mt-4 max-w-[330px] text-[14.5px] leading-[1.58] text-ink-soft md:mx-0 md:mt-5 md:max-w-[520px] md:text-[16px]">
