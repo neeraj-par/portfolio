@@ -6,6 +6,10 @@ import SectionHead from "./ui/SectionHead";
 import Reveal from "./ui/Reveal";
 import TechChip from "./ui/TechChip";
 
+const ROTATIONS = ["-rotate-[1.1deg]", "rotate-[0.8deg]", "-rotate-[0.6deg]"];
+const TAPE_ROTATIONS = ["-rotate-[6deg]", "rotate-[3deg]", "-rotate-[2deg]"];
+const TAPE_POSITIONS = ["left-6", "left-1/2 -translate-x-1/2", "right-6"];
+
 const ICON_PATHS: Record<string, React.ReactNode> = {
   brackets: (
     <>
@@ -51,9 +55,10 @@ export default function Toolkit() {
           {toolkit.map((cat, i) => (
             <Reveal key={cat.title} delay={i * 0.06}>
               <motion.div
-                whileHover={{ y: -4 }}
-                className="card card-hover mobile-card h-full p-5 md:w-auto md:p-6"
+                whileHover={{ y: -4, rotate: 0 }}
+                className={`card card-hover mobile-card relative h-full p-5 md:w-auto md:p-6 ${ROTATIONS[i % 3]}`}
               >
+                <span className={`tape top-[-9px] ${TAPE_POSITIONS[i % 3]} ${TAPE_ROTATIONS[i % 3]}`} />
                 <div className="mb-3 flex items-center gap-3">
                   <div className="sketch-icon-btn float-icon flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-black/[0.14] bg-accent-soft text-accent md:h-11 md:w-11">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5">
