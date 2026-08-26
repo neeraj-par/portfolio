@@ -6,8 +6,8 @@ import Reveal from "./ui/Reveal";
 
 export default function Engineer() {
   return (
-    <section id="about" className="py-[76px]">
-      <div className="mx-auto max-w-[1080px] px-7">
+    <section id="about" className="section-pad">
+      <div className="mx-auto max-w-[1080px] px-5 md:px-7">
         <SectionHead
           eyebrow="The Engineer"
           title="The Engineer"
@@ -15,16 +15,17 @@ export default function Engineer() {
         />
 
         <Reveal>
-          <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-[0.7fr_1.3fr]">
-            <div className="card mx-auto w-full max-w-[230px] -rotate-2 p-3.5">
+          <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-[0.7fr_1.3fr] md:gap-10">
+            <div className="card card-hover float-card float-card-slow relative mx-auto w-full max-w-[210px] p-3.5 [--float-rotate:-2deg] md:max-w-[230px]">
+              <span className="tape left-1/2 top-[-9px] -translate-x-1/2 rotate-[5deg]" />
               <div className="flex aspect-square items-center justify-center rounded-sm bg-gradient-to-br from-accent-soft to-[#F5E4D8] font-caveat text-7xl font-bold text-accent">
                 N
               </div>
             </div>
 
-            <div className="card p-7 md:p-8">
+            <div className="card mobile-card p-5 md:w-auto md:p-8">
               <h3 className="mb-3.5 font-sora text-lg">My Story</h3>
-              <p className="mb-3 text-[15px] text-ink-soft">{summary}</p>
+              <p className="mb-3 text-[14px] leading-relaxed text-ink-soft md:text-[15px]">{summary}</p>
 
               <div className="mt-5 grid grid-cols-1 gap-3.5 border-t border-dashed border-black/[0.14] pt-5 sm:grid-cols-2">
                 <InfoRow label="Name" value={profile.name} icon="user" />
@@ -70,7 +71,7 @@ const ICONS: Record<string, React.ReactNode> = {
 function InfoRow({ label, value, icon }: { label: string; value: string; icon: string }) {
   return (
     <div className="flex items-center gap-2.5 text-[13.5px]">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#C15E3D" strokeWidth={2} className="h-4 w-4 shrink-0">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#C15E3D" strokeWidth={2} className="float-icon h-4 w-4 shrink-0">
         {ICONS[icon]}
       </svg>
       <div>
