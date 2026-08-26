@@ -5,6 +5,9 @@ import { roleHeader, timeline } from "@/lib/content";
 import SectionHead from "./ui/SectionHead";
 import Reveal from "./ui/Reveal";
 
+const ROTATIONS = ["-rotate-[1deg]", "rotate-[0.9deg]", "-rotate-[0.7deg]"];
+const TAPE_ROTATIONS = ["-rotate-[6deg]", "rotate-[4deg]", "-rotate-[3deg]"];
+
 const TL_ICONS = [
   <><path key="a" d="M3 3h18v18H3z" /><path d="M3 9h18M9 21V9" /></>,
   <><rect key="b" x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></>,
@@ -23,7 +26,8 @@ export default function Story() {
 
         <div className="mx-auto max-w-[820px]">
           <Reveal>
-            <div className="card card-hover mobile-card mb-7 p-5 md:mb-10 md:w-auto md:p-7">
+            <div className="card card-hover mobile-card relative mb-7 rotate-[0.6deg] p-5 md:mb-10 md:w-auto md:p-7">
+              <span className="tape left-1/2 top-[-9px] -translate-x-1/2 -rotate-[4deg]" />
               <div className="font-sora text-[16px] font-bold md:text-lg">
                 {roleHeader.role} <span className="font-normal text-accent">at {roleHeader.org}</span>
               </div>
@@ -45,10 +49,11 @@ export default function Story() {
                     {TL_ICONS[i % 3]}
                   </svg>
                 </motion.div>
-                <div className="card card-hover p-5 md:p-6">
-                <div className="font-sora text-[15px] font-semibold md:text-[16px]">{item.title}</div>
-                <div className="my-1 font-mono text-[11.5px] text-ink-faint">{item.date}</div>
-                <p className="text-[13.5px] leading-relaxed text-ink-soft md:text-[14.5px]">{item.description}</p>
+                <div className={`card card-hover relative p-5 md:p-6 ${ROTATIONS[i % 3]}`}>
+                  <span className={`tape left-6 top-[-9px] ${TAPE_ROTATIONS[i % 3]}`} />
+                  <div className="font-sora text-[15px] font-semibold md:text-[16px]">{item.title}</div>
+                  <div className="my-1 font-mono text-[11.5px] text-ink-faint">{item.date}</div>
+                  <p className="text-[13.5px] leading-relaxed text-ink-soft md:text-[14.5px]">{item.description}</p>
                 </div>
               </Reveal>
             ))}
