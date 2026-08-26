@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { toolkit } from "@/lib/content";
 import SectionHead from "./ui/SectionHead";
 import Reveal from "./ui/Reveal";
+import TechChip from "./ui/TechChip";
 
 const ICON_PATHS: Record<string, React.ReactNode> = {
   brackets: (
@@ -38,31 +39,33 @@ const ICON_PATHS: Record<string, React.ReactNode> = {
 
 export default function Toolkit() {
   return (
-    <section id="toolkit" className="py-[76px]">
-      <div className="mx-auto max-w-[1080px] px-7">
+    <section id="toolkit" className="section-pad">
+      <div className="mx-auto max-w-[1120px] px-5 md:px-7">
         <SectionHead
           eyebrow="The Toolkit"
           title="The Toolkit"
           subtitle="Stack and tools I sketch my systems with."
         />
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
           {toolkit.map((cat, i) => (
             <Reveal key={cat.title} delay={i * 0.06}>
-              <motion.div whileHover={{ y: -4 }} className="card h-full p-6">
-                <div className="mb-3.5 flex h-11 w-11 items-center justify-center rounded-full bg-accent-soft text-accent">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5">
-                    {ICON_PATHS[cat.icon]}
-                  </svg>
+              <motion.div
+                whileHover={{ y: -4 }}
+                className="card card-hover mobile-card h-full p-5 md:w-auto md:p-6"
+              >
+                <div className="mb-3 flex items-center gap-3">
+                  <div className="sketch-icon-btn float-icon flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-black/[0.14] bg-accent-soft text-accent md:h-11 md:w-11">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5">
+                      {ICON_PATHS[cat.icon]}
+                    </svg>
+                  </div>
+                  <h3 className="font-sora text-[15px] md:text-[16px]">{cat.title}</h3>
                 </div>
-                <h3 className="mb-1.5 font-sora text-[16px]">{cat.title}</h3>
-                <p className="mb-3.5 text-[13.5px] text-ink-soft">{cat.description}</p>
+                <p className="mb-4 text-[13.5px] leading-relaxed text-ink-soft md:text-[14px]">{cat.description}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {cat.tags.map((tag) => (
-                    <span key={tag} className="tag-chip">
-                      <span className="dot" />
-                      {tag}
-                    </span>
+                    <TechChip key={tag} tag={tag} />
                   ))}
                 </div>
               </motion.div>
