@@ -42,9 +42,9 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-[76px]">
-      <div className="mx-auto max-w-[1080px] px-7">
-        <div className="mx-auto mb-11 max-w-xl text-center">
+    <section id="contact" className="section-pad">
+      <div className="mx-auto max-w-[1120px] px-5 md:px-7">
+        <div className="mx-auto mb-9 max-w-xl text-center md:mb-14">
           <p className="section-eyebrow">Let&apos;s Create</p>
           <h2 className="section-title inline-block">Let&apos;s build something.</h2>
           <svg className="mx-auto block h-2.5 w-full max-w-[220px]" viewBox="0 0 220 10" fill="none">
@@ -55,14 +55,14 @@ export default function Contact() {
               strokeLinecap="round"
             />
           </svg>
-          <p className="mt-2.5 font-caveat text-xl text-ink-soft">— drop me a line, I usually reply same day</p>
+          <p className="mx-auto mt-2.5 max-w-[320px] font-caveat text-xl leading-snug text-ink-soft">Drop me a line. I usually reply the same day.</p>
         </div>
 
-        <Reveal className="grid grid-cols-1 gap-6 md:grid-cols-[0.85fr_1.15fr]">
-          <div className="rounded-[10px] bg-ink p-8 text-paper">
+        <Reveal className="grid grid-cols-1 gap-6 md:grid-cols-[minmax(300px,0.9fr)_minmax(420px,1.1fr)] md:gap-8">
+          <div className="mobile-card rounded-[10px] bg-ink p-6 text-paper md:w-auto md:p-8">
             <h3 className="mb-2 font-sora text-[22px]">Say Hello</h3>
             <p className="mb-6 font-caveat text-xl text-[#E7B39D]">
-              Building projects and collaborations — drop me a line.
+              Building projects and collaborations. Drop me a line.
             </p>
 
             <ContactRow href={`mailto:${profile.email}`} label={profile.email}>
@@ -86,7 +86,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="card p-7">
+          <form onSubmit={handleSubmit} className="card card-hover mobile-card min-w-0 p-5 pb-6 md:w-auto md:p-7">
             <Field id="name" label="Name" placeholder="Your full name" />
             <Field id="email" label="Email" type="email" placeholder="you@example.com" />
             <Field id="subject" label="Subject" placeholder="What's this about?" />
@@ -109,13 +109,13 @@ export default function Contact() {
               whileTap={{ scale: status === "sending" ? 1 : 0.98 }}
               type="submit"
               disabled={status === "sending"}
-              className="w-full rounded-full bg-accent py-3.5 text-[14.5px] font-semibold text-white disabled:opacity-60"
+              className="sketch-btn w-full py-3.5 text-[14.5px] font-semibold disabled:opacity-60"
             >
-              {status === "sending" ? "Sending…" : "Send Message →"}
+              <span>{status === "sending" ? "Sending..." : "Send Message"}</span>
             </motion.button>
 
             {status === "sent" && (
-              <p className="mt-3 text-sm text-emerald-700">Message sent — I&apos;ll get back to you soon.</p>
+              <p className="mt-3 text-sm text-emerald-700">Message sent. I&apos;ll get back to you soon.</p>
             )}
             {status === "error" && (
               <p className="mt-3 text-sm text-red-700">
@@ -203,7 +203,7 @@ function ContactIcon({
       aria-label={label}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      className="flex h-[38px] w-[38px] items-center justify-center rounded-full border border-paper/20 bg-paper/[0.06] text-paper hover:border-accent hover:text-accent"
+      className="sketch-icon-btn float-icon flex h-[38px] w-[38px] items-center justify-center rounded-full border border-paper/20 bg-paper/[0.06] text-paper hover:border-accent hover:text-accent"
     >
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
         {children}
