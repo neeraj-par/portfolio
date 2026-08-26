@@ -31,12 +31,12 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Neeraj Kumar — Full Stack Developer",
+  title: "Neeraj Kumar: Full Stack Developer",
   description:
     "Full Stack Developer (MERN) at Pakistan Agriculture Research. RBAC platforms, secure APIs, and dashboards, built in Karachi.",
   metadataBase: new URL("https://neerajkumar.dev"),
   openGraph: {
-    title: "Neeraj Kumar — Full Stack Developer",
+    title: "Neeraj Kumar: Full Stack Developer",
     description: "Full Stack Developer (MERN) at Pakistan Agriculture Research.",
     type: "website",
   },
