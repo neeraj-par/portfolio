@@ -26,7 +26,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Agri Data Dashboard",
-    date: "Jun 2024 — Present",
+    date: "Jun 2024 to Present",
     status: "Live",
     description:
       "Dynamic, role-aware data APIs and a revamped React landing page. Mixpanel and ApexCharts turn raw agricultural data into something people actually read. Organic traffic up 40%.",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
   },
   {
     title: "PAR Admin Panel",
-    date: "Jun 2024 — Present",
+    date: "Jun 2024 to Present",
     status: "Live",
     description:
       "RBAC admin panel backed by secure Node/Express APIs. Python scrapers and node-cron replaced manual data entry outright. Team efficiency up 50%.",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
   },
   {
     title: "News Bulletin Automation",
-    date: "Jan 2026 — Feb 2026",
+    date: "Jan 2026 to Feb 2026",
     status: "Shipped",
     description:
       "Multi-source news pipeline that condenses articles 60 to 70% into publication-ready bulletins, delivered on schedule through Amazon SES.",
@@ -61,13 +61,13 @@ export const toolkit: ToolCategory[] = [
   {
     title: "Frontend Development",
     description: "Building responsive, accessible interfaces with modern component-driven frameworks.",
-    tags: ["React / Next.js", "TypeScript", "Tailwind", "ShadCN"],
+    tags: ["React / Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
     icon: "brackets",
   },
   {
     title: "Backend & Databases",
     description: "Designing secure APIs and data layers that hold up under real traffic.",
-    tags: ["Node.js", "Express", "MongoDB", "Redis"],
+    tags: ["Node.js", "Express.js", "MongoDB", "Redis"],
     icon: "database",
   },
   {
@@ -93,7 +93,7 @@ export const toolkit: ToolCategory[] = [
 export const roleHeader = {
   role: "Full Stack Developer",
   org: "Pakistan Agriculture Research",
-  date: "Jun 2024 — Present · Karachi, PK",
+  date: "Jun 2024 to Present · Karachi, PK",
   summary:
     "Owns the RBAC platform end to end: built a four-tier access system from scratch, layered in JWT auth with Redis-backed session control, and cut API response times by 40% along the way. Runs CI/CD through GitHub Actions and VPS deployment, with a Git review workflow that's cut deployment issues in half.",
 };
@@ -107,19 +107,19 @@ export type TimelineItem = {
 export const timeline: TimelineItem[] = [
   {
     title: "Agri Data Dashboard",
-    date: "Jun 2024 — Present",
+    date: "Jun 2024 to Present",
     description:
       "Backend APIs for dynamic, role-aware data queries, paired with a revamped landing page that lifted organic traffic by 40%. Mixpanel and ApexCharts turned raw agricultural data into something people actually read.",
   },
   {
     title: "PAR Admin Panel",
-    date: "Jun 2024 — Present",
+    date: "Jun 2024 to Present",
     description:
       "An RBAC admin panel that lifted team efficiency by 50%, backed by secure Node/Express APIs and Python scrapers that replaced manual data entry outright.",
   },
   {
     title: "News Bulletin Automation",
-    date: "Jan 2026 — Feb 2026",
+    date: "Jan 2026 to Feb 2026",
     description:
       "A pipeline that pulls from multiple sources, condenses it 60 to 70% into publication-ready bulletins, and ships them out on schedule through Amazon SES.",
   },
@@ -128,6 +128,6 @@ export const timeline: TimelineItem[] = [
 export const education = {
   school: "DHA Suffa University, Karachi",
   degree: "B.S. Computer Science",
-  date: "Sep 2019 — Feb 2024",
+  date: "Sep 2019 to Feb 2024",
   note: "Foundation in data structures, algorithms and full stack web development.",
 };
