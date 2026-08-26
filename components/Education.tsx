@@ -13,7 +13,8 @@ export default function Education() {
         />
 
         <Reveal className="flex justify-center">
-          <div className="card card-hover mobile-card flex gap-4 p-5 md:max-w-[520px] md:p-7">
+          <div className="card card-hover mobile-card relative flex -rotate-[0.7deg] gap-4 p-5 md:max-w-[520px] md:p-7">
+            <span className="tape left-8 top-[-9px] -rotate-[5deg]" />
             <div className="sketch-icon-btn float-icon flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-full border border-black/[0.14] bg-accent-soft text-accent">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-[22px] w-[22px]">
                 <path d="M22 10 12 5 2 10l10 5 10-5Z" />
