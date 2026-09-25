@@ -1,17 +1,14 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-  ],
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
         paper: "#F5F0E4",
         ink: "#221F1A",
         "ink-soft": "#5B564A",
-        "ink-faint": "#96907D",
+        "ink-faint": "#6F6A58",
         accent: "#C15E3D",
         "accent-soft": "#EFD3C3",
         tape: "#EAC7BC",

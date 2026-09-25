@@ -72,12 +72,17 @@ section[id] {
 }
 
 .card-hover {
-  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
 }
 
 .card-hover:hover {
   border-color: rgba(193, 94, 61, 0.55);
-  box-shadow: 0 2px 0 rgba(34, 31, 26, 0.16), 0 18px 34px -20px rgba(34, 31, 26, 0.45);
+  box-shadow:
+    0 2px 0 rgba(34, 31, 26, 0.16),
+    0 18px 34px -20px rgba(34, 31, 26, 0.45);
 }
 
 .sketch-btn {
@@ -92,7 +97,10 @@ section[id] {
   color: #fff;
   box-shadow: 0 4px 0 #221f1a;
   transform: skewX(-8deg);
-  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
 }
 
 .sketch-btn > * {
@@ -117,7 +125,10 @@ section[id] {
   color: #221f1a;
   box-shadow: 0 3px 0 rgba(34, 31, 26, 0.82);
   transform: skewX(8deg);
-  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
 }
 
 .sketch-btn-ghost > * {
@@ -132,7 +143,11 @@ section[id] {
 
 .sketch-icon-btn {
   box-shadow: 0 3px 0 rgba(34, 31, 26, 0.82);
-  transition: transform 180ms ease, box-shadow 180ms ease, color 180ms ease, border-color 180ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease;
 }
 
 .sketch-icon-btn:hover {
@@ -152,7 +167,11 @@ section[id] {
     linear-gradient(rgba(251, 248, 240, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(251, 248, 240, 0.08) 1px, transparent 1px),
     linear-gradient(135deg, #191b19, #24342d 58%, #c15e3d);
-  background-size: 100% 100%, 18px 18px, 18px 18px, 100% 100%;
+  background-size:
+    100% 100%,
+    18px 18px,
+    18px 18px,
+    100% 100%;
 }
 
 .portfolio-preview-panel {
@@ -245,7 +264,11 @@ section[id] {
   gap: 6px;
   white-space: nowrap;
   cursor: pointer;
-  transition: border-color 160ms ease, color 160ms ease, background 160ms ease, transform 160ms ease,
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease,
     box-shadow 160ms ease;
 }
 
