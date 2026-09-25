@@ -1,10 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { profile, summary } from "@/lib/content";
 import SectionHead from "./ui/SectionHead";
 import Reveal from "./ui/Reveal";
 
-export default function Engineer() {
+const Engineer = () => {
   return (
     <section id="about" className="section-pad">
       <div className="mx-auto max-w-[1080px] px-5 md:px-7">
@@ -18,9 +19,14 @@ export default function Engineer() {
           <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-[0.7fr_1.3fr] md:gap-10">
             <div className="card card-hover float-card float-card-slow relative mx-auto w-full max-w-[210px] p-3.5 [--float-rotate:-2deg] md:max-w-[230px]">
               <span className="tape left-1/2 top-[-9px] -translate-x-1/2 rotate-[5deg]" />
-              <div className="flex aspect-square items-center justify-center rounded-sm bg-gradient-to-br from-accent-soft to-[#F5E4D8] font-caveat text-7xl font-bold text-accent">
-                N
-              </div>
+              <Image
+                src="/neeraj.jpg"
+                alt="Portrait of Neeraj Kumar"
+                width={440}
+                height={440}
+                sizes="230px"
+                className="aspect-square w-full rounded-sm object-cover"
+              />
             </div>
 
             <div className="card mobile-card p-5 md:w-auto md:p-8">
@@ -39,7 +45,7 @@ export default function Engineer() {
       </div>
     </section>
   );
-}
+};
 
 const ICONS: Record<string, React.ReactNode> = {
   user: (
@@ -68,7 +74,7 @@ const ICONS: Record<string, React.ReactNode> = {
   ),
 };
 
-function InfoRow({ label, value, icon }: { label: string; value: string; icon: string }) {
+const InfoRow = ({ label, value, icon }: { label: string; value: string; icon: string }) => {
   return (
     <div className="flex items-center gap-2.5 text-[13.5px]">
       <svg viewBox="0 0 24 24" fill="none" stroke="#C15E3D" strokeWidth={2} className="float-icon h-4 w-4 shrink-0">
@@ -80,4 +86,6 @@ function InfoRow({ label, value, icon }: { label: string; value: string; icon: s
       </div>
     </div>
   );
-}
+};
+
+export default Engineer;

@@ -6,7 +6,8 @@ import SectionHead from "./ui/SectionHead";
 import Reveal from "./ui/Reveal";
 import TechChip from "./ui/TechChip";
 
-const ROTATIONS = ["-rotate-[1.1deg]", "rotate-[0.8deg]", "-rotate-[0.6deg]"];
+// Degrees, set through Framer so its transform does not overwrite a CSS rotate class.
+const ROTATIONS = [-1.1, 0.8, -0.6];
 const TAPE_ROTATIONS = ["-rotate-[6deg]", "rotate-[3deg]", "-rotate-[2deg]"];
 const TAPE_POSITIONS = ["left-6", "left-1/2 -translate-x-1/2", "right-6"];
 
@@ -41,22 +42,19 @@ const ICON_PATHS: Record<string, React.ReactNode> = {
   ),
 };
 
-export default function Toolkit() {
+const Toolkit = () => {
   return (
     <section id="toolkit" className="section-pad">
       <div className="mx-auto max-w-[1120px] px-5 md:px-7">
-        <SectionHead
-          eyebrow="The Toolkit"
-          title="The Toolkit"
-          subtitle="Stack and tools I sketch my systems with."
-        />
+        <SectionHead eyebrow="The Toolkit" title="The Toolkit" subtitle="Stack and tools I sketch my systems with." />
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
           {toolkit.map((cat, i) => (
-            <Reveal key={cat.title} delay={i * 0.06}>
+            <Reveal key={cat.title} delay={i * 0.06} className="h-full">
               <motion.div
+                style={{ rotate: ROTATIONS[i % 3] }}
                 whileHover={{ y: -4, rotate: 0 }}
-                className={`card card-hover mobile-card relative h-full p-5 md:w-auto md:p-6 ${ROTATIONS[i % 3]}`}
+                className={`card card-hover mobile-card relative h-full p-5 md:w-auto md:p-6`}
               >
                 <span className={`tape top-[-9px] ${TAPE_POSITIONS[i % 3]} ${TAPE_ROTATIONS[i % 3]}`} />
                 <div className="mb-3 flex items-center gap-3">
@@ -80,4 +78,6 @@ export default function Toolkit() {
       </div>
     </section>
   );
-}
+};
+
+export default Toolkit;

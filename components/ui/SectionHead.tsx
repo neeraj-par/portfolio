@@ -1,14 +1,6 @@
 import Squiggle from "./Squiggle";
 
-export default function SectionHead({
-  eyebrow,
-  title,
-  subtitle,
-}: {
-  eyebrow: string;
-  title: string;
-  subtitle: string;
-}) {
+const SectionHead = ({ eyebrow, title, subtitle }: { eyebrow: string; title: string; subtitle: string }) => {
   return (
     <div className="mx-auto mb-9 max-w-xl text-center md:mb-14">
       <p className="section-eyebrow">{eyebrow}</p>
@@ -19,4 +11,6 @@ export default function SectionHead({
       </p>
     </div>
   );
-}
+};
+
+export default SectionHead;

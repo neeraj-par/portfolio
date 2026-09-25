@@ -2,7 +2,7 @@ import { education } from "@/lib/content";
 import SectionHead from "./ui/SectionHead";
 import Reveal from "./ui/Reveal";
 
-export default function Education() {
+const Education = () => {
   return (
     <section id="education" className="section-pad">
       <div className="mx-auto max-w-[1120px] px-5 md:px-7">
@@ -32,4 +32,6 @@ export default function Education() {
       </div>
     </section>
   );
-}
+};
+
+export default Education;

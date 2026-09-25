@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export function StarDoodle({ className = "" }: { className?: string }) {
+export const StarDoodle = ({ className = "" }: { className?: string }) => {
   return (
     <motion.svg
       className={`pointer-events-none opacity-30 ${className}`}
@@ -18,9 +18,9 @@ export function StarDoodle({ className = "" }: { className?: string }) {
       <path d="M23 3 L27 18 L42 23 L27 28 L23 43 L19 28 L4 23 L19 18 Z" strokeLinejoin="round" />
     </motion.svg>
   );
-}
+};
 
-export function TargetDoodle({ className = "" }: { className?: string }) {
+export const TargetDoodle = ({ className = "" }: { className?: string }) => {
   return (
     <motion.svg
       className={`pointer-events-none opacity-30 ${className}`}
@@ -40,9 +40,9 @@ export function TargetDoodle({ className = "" }: { className?: string }) {
       <line x1="21" y1="35" x2="21" y2="42" />
     </motion.svg>
   );
-}
+};
 
-export function ScribbleDoodle({ className = "" }: { className?: string }) {
+export const ScribbleDoodle = ({ className = "" }: { className?: string }) => {
   return (
     <motion.svg
       className={`pointer-events-none opacity-25 ${className}`}
@@ -61,4 +61,4 @@ export function ScribbleDoodle({ className = "" }: { className?: string }) {
       />
     </motion.svg>
   );
-}
+};

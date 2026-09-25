@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
-export default function Reveal({
+const Reveal = ({
   children,
   delay = 0,
   className = "",
@@ -11,7 +11,7 @@ export default function Reveal({
   children: ReactNode;
   delay?: number;
   className?: string;
-}) {
+}) => {
   return (
     <motion.div
       className={className}
@@ -23,4 +23,6 @@ export default function Reveal({
       {children}
     </motion.div>
   );
-}
+};
+
+export default Reveal;

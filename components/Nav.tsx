@@ -20,16 +20,14 @@ const LINKS: NavLink[] = [
 const OBSERVED_SECTIONS = [...LINKS, { href: "#contact", label: "Contact" }];
 const DRAWER_LINKS: NavLink[] = LINKS;
 
-export default function Nav() {
+const Nav = () => {
   const [active, setActive] = useState("#top");
   const [open, setOpen] = useState(false);
   const [pendingScroll, setPendingScroll] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const sections = OBSERVED_SECTIONS.map((l) => document.querySelector(l.href)).filter(
-      (el): el is Element => !!el
-    );
+    const sections = OBSERVED_SECTIONS.map((l) => document.querySelector(l.href)).filter((el): el is Element => !!el);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -60,16 +58,16 @@ export default function Nav() {
   }, [open, pendingScroll]);
 
   useEffect(() => {
-    function handleScroll() {
+    const handleScroll = () => {
       setScrolled(window.scrollY > 72);
-    }
+    };
 
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  function handleRouteClick(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
+  const handleRouteClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) {
       return;
     }
@@ -85,9 +83,9 @@ export default function Nav() {
     }
 
     scrollToSection(href);
-  }
+  };
 
-  function scrollToSection(href: string) {
+  const scrollToSection = (href: string) => {
     const target = document.querySelector(href);
     if (!target) {
       window.location.hash = href;
@@ -98,7 +96,7 @@ export default function Nav() {
       behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
       block: "start",
     });
-  }
+  };
 
   return (
     <div className="sticky top-0 z-50 flex justify-center px-0 md:top-4 md:px-4">
@@ -134,8 +132,7 @@ export default function Nav() {
             className={`pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-[112px] transition-opacity duration-200 max-[767px]:flex ${
               scrolled && !open ? "opacity-30" : "opacity-0"
             }`}
-          >
-          </div>
+          ></div>
 
           <button
             type="button"
@@ -175,9 +172,7 @@ export default function Nav() {
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
-                <span
-                  className={`relative z-10 ${active === link.href ? "text-accent md:text-white" : ""}`}
-                >
+                <span className={`relative z-10 ${active === link.href ? "text-accent md:text-white" : ""}`}>
                   {link.label}
                 </span>
               </a>
@@ -195,4 +190,6 @@ export default function Nav() {
       </nav>
     </div>
   );
-}
+};
+
+export default Nav;

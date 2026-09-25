@@ -7,7 +7,7 @@ const WAYPOINTS_X = [2, 20, 38, 74, 110, 146, 182, 218];
 const WAYPOINTS_Y = [6, 1, 6, 6, 6, 6, 6, 6];
 const TIMES = [0, 0.1, 0.22, 0.4, 0.58, 0.76, 0.9, 1];
 
-export default function Squiggle({ className = "" }: { className?: string }) {
+const Squiggle = ({ className = "" }: { className?: string }) => {
   return (
     <svg
       className={`block h-4 w-full max-w-[220px] overflow-visible ${className}`}
@@ -47,4 +47,6 @@ export default function Squiggle({ className = "" }: { className?: string }) {
       </motion.g>
     </svg>
   );
-}
+};
+
+export default Squiggle;

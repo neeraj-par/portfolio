@@ -9,12 +9,18 @@ const ROTATIONS = ["-rotate-[1deg]", "rotate-[0.9deg]", "-rotate-[0.7deg]"];
 const TAPE_ROTATIONS = ["-rotate-[6deg]", "rotate-[4deg]", "-rotate-[3deg]"];
 
 const TL_ICONS = [
-  <><path key="a" d="M3 3h18v18H3z" /><path d="M3 9h18M9 21V9" /></>,
-  <><rect key="b" x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></>,
+  <>
+    <path key="a" d="M3 3h18v18H3z" />
+    <path d="M3 9h18M9 21V9" />
+  </>,
+  <>
+    <rect key="b" x="3" y="3" width="18" height="18" rx="2" />
+    <path d="M3 9h18M9 21V9" />
+  </>,
   <path key="c" d="M22 12h-4l-3 9L9 3l-3 9H2" />,
 ];
 
-export default function Story() {
+const Story = () => {
   return (
     <section id="story" className="section-pad">
       <div className="mx-auto max-w-[1120px] px-5 md:px-7">
@@ -33,6 +39,12 @@ export default function Story() {
               </div>
               <div className="mt-0.5 font-mono text-xs text-ink-faint">{roleHeader.date}</div>
               <p className="mt-3 text-[13.5px] leading-relaxed text-ink-soft md:text-[14.5px]">{roleHeader.summary}</p>
+              <ul className="mt-3 list-disc space-y-1.5 pl-5 text-[13.5px] leading-relaxed text-ink-soft marker:text-accent md:text-[14.5px]">
+                {roleHeader.highlights.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+              <p className="mt-3 font-mono text-[11.5px] text-ink-faint">{roleHeader.softSkills}</p>
             </div>
           </Reveal>
 
@@ -40,7 +52,11 @@ export default function Story() {
             <div className="absolute bottom-0 left-[18px] top-0 border-l-2 border-dashed border-black/[0.14]" />
 
             {timeline.map((item, i) => (
-              <Reveal key={item.title} delay={i * 0.1} className="relative mb-6 pl-[44px] last:mb-0 md:mb-8 md:pl-[56px]">
+              <Reveal
+                key={item.title}
+                delay={i * 0.1}
+                className="relative mb-6 pl-[44px] last:mb-0 md:mb-8 md:pl-[56px]"
+              >
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   className="absolute left-1.5 top-0.5 flex h-[26px] w-[26px] items-center justify-center rounded-full border-2 border-accent bg-card"
@@ -62,4 +78,6 @@ export default function Story() {
       </div>
     </section>
   );
-}
+};
+
+export default Story;

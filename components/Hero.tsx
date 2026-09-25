@@ -1,11 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { profile, heroNote } from "@/lib/content";
+import { profile, heroNote, experienceYears } from "@/lib/content";
 import { StarDoodle, TargetDoodle } from "./ui/Doodles";
 import Squiggle from "./ui/Squiggle";
 
-export default function Hero() {
+const Hero = () => {
   return (
     <section id="top" className="relative overflow-hidden pb-10 pt-5 md:pb-20 md:pt-20">
       <StarDoodle className="absolute right-[6%] top-6 hidden md:block" />
@@ -55,7 +56,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 href={profile.resumeUrl}
-                download
+                download={profile.resumeFileName}
                 className="sketch-btn-ghost px-6 py-3 text-sm font-semibold"
               >
                 <span className="inline-flex items-center gap-2">
@@ -91,22 +92,37 @@ export default function Hero() {
               className="card float-card float-card-slow relative z-0 w-[188px] p-4 pb-5 [--float-rotate:3deg] md:w-[220px]"
             >
               <span className="tape left-1/2 top-[-12px] -translate-x-1/2 -rotate-[4deg]" />
-              <div className="flex aspect-square items-center justify-center rounded-sm bg-gradient-to-br from-accent-soft to-[#F5E4D8] font-caveat text-8xl font-bold text-accent">
-                N
-              </div>
+              <Image
+                src="/neeraj.jpg"
+                alt="Portrait of Neeraj Kumar"
+                width={440}
+                height={440}
+                priority
+                className="aspect-square w-full rounded-sm object-cover"
+              />
               <p className="mt-3 text-center font-caveat text-xl text-ink-soft">Neeraj</p>
             </motion.div>
 
-            <StatCard className="bottom-2 left-[calc(50%-98px)] [--float-rotate:-4deg]" num="~2" label="Years Exp." delay={0.3} />
-            <StatCard className="bottom-2 right-[calc(50%-98px)] [--float-rotate:4deg]" num="3+" label="Shipped" delay={0.45} />
+            <StatCard
+              className="bottom-2 left-[calc(50%-98px)] [--float-rotate:-4deg]"
+              num={`${experienceYears()}+`}
+              label="Years Exp."
+              delay={0.3}
+            />
+            <StatCard
+              className="bottom-2 right-[calc(50%-98px)] [--float-rotate:4deg]"
+              num="3+"
+              label="Shipped"
+              delay={0.45}
+            />
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
-function StatCard({
+const StatCard = ({
   className,
   num,
   label,
@@ -116,7 +132,7 @@ function StatCard({
   num: string;
   label: string;
   delay: number;
-}) {
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -125,13 +141,16 @@ function StatCard({
       whileHover={{ y: -3 }}
       className={`card float-card absolute z-10 min-w-[82px] px-3 py-2.5 text-center md:min-w-[92px] md:px-4 md:py-3 ${className}`}
     >
-      <div className="font-sora text-lg font-bold md:text-xl">{num}</div>
+      {/* Years Exp. depends on today's date, which can differ from the static build */}
+      <div suppressHydrationWarning className="font-sora text-lg font-bold md:text-xl">
+        {num}
+      </div>
       <div className="mt-0.5 font-mono text-[9px] uppercase tracking-wide text-ink-faint md:text-[10.5px]">{label}</div>
     </motion.div>
   );
-}
+};
 
-function SocialCircle({
+const SocialCircle = ({
   href,
   label,
   external,
@@ -141,7 +160,7 @@ function SocialCircle({
   label: string;
   external?: boolean;
   children: React.ReactNode;
-}) {
+}) => {
   return (
     <motion.a
       whileHover={{ y: -3, borderColor: "#C15E3D", color: "#C15E3D" }}
@@ -156,4 +175,6 @@ function SocialCircle({
       </svg>
     </motion.a>
   );
-}
+};
+
+export default Hero;
