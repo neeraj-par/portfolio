@@ -98,7 +98,7 @@ const Portfolio = () => {
                   <button
                     type="button"
                     onClick={() => setOpenIndex(i)}
-                    className="rounded-full border border-black/[0.14] bg-accent-soft px-3 py-1 font-caveat text-[17px] font-bold text-accent"
+                    className="rounded-full border border-black/[0.14] bg-accent-soft px-3 py-1 font-caveat text-[17px] font-bold text-ink"
                   >
                     View project
                   </button>

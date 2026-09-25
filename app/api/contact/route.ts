@@ -104,7 +104,7 @@ export const POST = async (req: NextRequest) => {
       subject: `[Portfolio] ${subject.replace(/[\r\n]+/g, " ")}`,
       html: `
         <div style="font-family: -apple-system, sans-serif; max-width: 560px; margin: 0 auto;">
-          <h2 style="color: #C15E3D; margin-bottom: 4px;">New message from your portfolio</h2>
+          <h2 style="color: #B0502F; margin-bottom: 4px;">New message from your portfolio</h2>
           <p style="color: #5B564A; font-size: 13px; margin-top: 0;">Sent via the contact form on your site</p>
           <table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
             <tr>

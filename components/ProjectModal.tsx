@@ -31,7 +31,7 @@ const Flow = ({ caption, steps }: { caption: string; steps: string[] }) => (
             <svg
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#C15E3D"
+              stroke="#B0502F"
               strokeWidth={2}
               className="h-4 w-4 shrink-0 rotate-90 md:rotate-0"
               aria-hidden
@@ -106,7 +106,7 @@ const ProjectModal = ({ project, onClose }: { project: Project | null; onClose: 
 
           <div className="mb-4 flex flex-wrap items-center gap-2">
             <span className="font-mono text-[11px] text-ink-faint">{project.date}</span>
-            <span className="rounded-full bg-accent-soft px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wide text-accent">
+            <span className="rounded-full bg-accent-soft px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wide text-ink">
               {project.internal ? "Internal tool" : project.status}
             </span>
           </div>

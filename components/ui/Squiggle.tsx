@@ -17,7 +17,7 @@ const Squiggle = ({ className = "" }: { className?: string }) => {
     >
       <motion.path
         d={PATH_D}
-        stroke="#C15E3D"
+        stroke="#B0502F"
         strokeWidth={3}
         strokeLinecap="round"
         initial={{ pathLength: 0 }}

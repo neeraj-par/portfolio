@@ -61,7 +61,7 @@ const Story = () => {
                   whileHover={{ scale: 1.1 }}
                   className="absolute left-1.5 top-0.5 flex h-[26px] w-[26px] items-center justify-center rounded-full border-2 border-accent bg-card"
                 >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#C15E3D" strokeWidth={2} className="h-3 w-3">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#B0502F" strokeWidth={2} className="h-3 w-3">
                     {TL_ICONS[i % 3]}
                   </svg>
                 </motion.div>

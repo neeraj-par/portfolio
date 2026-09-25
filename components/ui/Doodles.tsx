@@ -28,14 +28,14 @@ export const TargetDoodle = ({ className = "" }: { className?: string }) => {
       height="42"
       viewBox="0 0 42 42"
       fill="none"
-      stroke="#C15E3D"
+      stroke="#B0502F"
       strokeWidth="1.2"
       animate={{ scale: [1, 1.08, 1] }}
       transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
     >
       <circle cx="21" cy="21" r="18" />
       <circle cx="21" cy="21" r="11" />
-      <circle cx="21" cy="21" r="2.4" fill="#C15E3D" stroke="none" />
+      <circle cx="21" cy="21" r="2.4" fill="#B0502F" stroke="none" />
       <line x1="21" y1="0" x2="21" y2="7" />
       <line x1="21" y1="35" x2="21" y2="42" />
     </motion.svg>

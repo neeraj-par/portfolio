@@ -77,7 +77,7 @@ const ICONS: Record<string, React.ReactNode> = {
 const InfoRow = ({ label, value, icon }: { label: string; value: string; icon: string }) => {
   return (
     <div className="flex items-center gap-2.5 text-[13.5px]">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#C15E3D" strokeWidth={2} className="float-icon h-4 w-4 shrink-0">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#B0502F" strokeWidth={2} className="float-icon h-4 w-4 shrink-0">
         {ICONS[icon]}
       </svg>
       <div>

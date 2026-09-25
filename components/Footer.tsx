@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="border-t border-dashed border-black/[0.14] py-8">
       <div className="mx-auto flex max-w-[1080px] flex-col items-center justify-between gap-3.5 px-5 text-center md:flex-row md:px-7 md:text-left">
         <div className="flex items-center gap-1.5 font-sora text-sm font-bold">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#C15E3D" strokeWidth={2} className="h-3.5 w-3.5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#B0502F" strokeWidth={2} className="h-3.5 w-3.5">
             <path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
           </svg>
           {profile.name}

@@ -9,7 +9,7 @@ const config: Config = {
         ink: "#221F1A",
         "ink-soft": "#5B564A",
         "ink-faint": "#6F6A58",
-        accent: "#C15E3D",
+        accent: "#B0502F",
         "accent-soft": "#EFD3C3",
         tape: "#EAC7BC",
         card: "#FBF8F0",

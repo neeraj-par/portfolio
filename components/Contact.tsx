@@ -234,7 +234,7 @@ const ContactRow = ({
 }) => {
   return (
     <div className="mb-4 flex items-center gap-3 text-sm">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#C15E3D" strokeWidth={2} className="h-[18px] w-[18px] shrink-0">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#B0502F" strokeWidth={2} className="h-[18px] w-[18px] shrink-0">
         {children}
       </svg>
       <a

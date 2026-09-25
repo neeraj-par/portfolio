@@ -113,7 +113,7 @@ const Nav = () => {
             onClick={(event) => handleRouteClick(event, "#top")}
             className="mr-1.5 flex shrink-0 items-center gap-1.5 justify-self-start font-caveat text-[22px] font-bold leading-none md:mr-2.5 md:font-sora md:text-[15px] md:leading-normal"
           >
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C15E3D" strokeWidth={2} className="h-4 w-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#B0502F" strokeWidth={2} className="h-4 w-4">
               <path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
             </svg>
             Neeraj

@@ -60,7 +60,7 @@ section[id] {
 }
 
 ::selection {
-  background: #c15e3d;
+  background: #b0502f;
   color: #fff;
 }
 
@@ -93,7 +93,7 @@ section[id] {
   gap: 0.45rem;
   border: 1px solid rgba(34, 31, 26, 0.9);
   border-radius: 999px 999px 999px 0.7rem;
-  background: #c15e3d;
+  background: #b0502f;
   color: #fff;
   box-shadow: 0 4px 0 #221f1a;
   transform: skewX(-8deg);
@@ -108,7 +108,7 @@ section[id] {
 }
 
 .sketch-btn:hover {
-  background: #ad5134;
+  background: #9a4529;
   box-shadow: 0 2px 0 #221f1a;
   transform: translateY(2px) skewX(-8deg);
 }
@@ -159,14 +159,14 @@ section[id] {
   background:
     radial-gradient(circle at 18% 24%, rgba(193, 94, 61, 0.45) 0 8px, transparent 9px),
     linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0 22%, transparent 22% 100%),
-    linear-gradient(135deg, #211f1b, #3d362d 62%, #c15e3d);
+    linear-gradient(135deg, #211f1b, #3d362d 62%, #b0502f);
 }
 
 .portfolio-preview-grid {
   background:
     linear-gradient(rgba(251, 248, 240, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(251, 248, 240, 0.08) 1px, transparent 1px),
-    linear-gradient(135deg, #191b19, #24342d 58%, #c15e3d);
+    linear-gradient(135deg, #191b19, #24342d 58%, #b0502f);
   background-size:
     100% 100%,
     18px 18px,
@@ -178,14 +178,14 @@ section[id] {
   background:
     radial-gradient(circle at 70% 22%, rgba(251, 248, 240, 0.2) 0 11px, transparent 12px),
     linear-gradient(135deg, rgba(251, 248, 240, 0.12) 0 28%, transparent 28% 100%),
-    linear-gradient(135deg, #202022, #34333b 58%, #c15e3d);
+    linear-gradient(135deg, #202022, #34333b 58%, #b0502f);
 }
 
 .portfolio-preview-news {
   background:
     linear-gradient(120deg, rgba(251, 248, 240, 0.13) 0 34%, transparent 34% 100%),
     repeating-linear-gradient(90deg, rgba(251, 248, 240, 0.2) 0 12px, transparent 12px 24px),
-    linear-gradient(135deg, #25211c, #3e3328 58%, #c15e3d);
+    linear-gradient(135deg, #25211c, #3e3328 58%, #b0502f);
 }
 
 .no-scrollbar {
@@ -274,8 +274,8 @@ section[id] {
 
 .tag-chip:hover,
 .tag-chip:focus-visible {
-  border-color: #c15e3d;
-  color: #c15e3d;
+  border-color: #b0502f;
+  color: #b0502f;
   background: #fff;
   transform: translateY(-2px);
   box-shadow: 0 3px 0 rgba(34, 31, 26, 0.18);
@@ -285,7 +285,7 @@ section[id] {
   width: 5px;
   height: 5px;
   border-radius: 999px;
-  background: #c15e3d;
+  background: #b0502f;
   flex-shrink: 0;
 }
 
@@ -301,7 +301,7 @@ section[id] {
 .section-eyebrow {
   font-family: var(--font-caveat), cursive;
   font-size: 21px;
-  color: #c15e3d;
+  color: #b0502f;
   margin: 0;
 }
 

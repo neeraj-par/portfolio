@@ -163,7 +163,7 @@ const SocialCircle = ({
 }) => {
   return (
     <motion.a
-      whileHover={{ y: -3, borderColor: "#C15E3D", color: "#C15E3D" }}
+      whileHover={{ y: -3, borderColor: "#B0502F", color: "#B0502F" }}
       href={href}
       aria-label={label}
       target={external ? "_blank" : undefined}
