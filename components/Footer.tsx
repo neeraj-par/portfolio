@@ -1,6 +1,7 @@
 import { profile } from "@/lib/content";
+import EmailMenu from "./ui/EmailMenu";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className="border-t border-dashed border-black/[0.14] py-8">
       <div className="mx-auto flex max-w-[1080px] flex-col items-center justify-between gap-3.5 px-5 text-center md:flex-row md:px-7 md:text-left">
@@ -10,20 +11,14 @@ export default function Footer() {
           </svg>
           {profile.name}
         </div>
-        <div className="font-mono text-[11.5px] text-ink-faint">
-          © 2026 {profile.name}. Built by hand, in Karachi.
-        </div>
+        <div className="font-mono text-[11.5px] text-ink-faint">© 2026 {profile.name}.</div>
         <div className="flex gap-2.5">
-          <a
-            href={`mailto:${profile.email}`}
-            aria-label="Email"
-            className="sketch-icon-btn float-icon flex h-[38px] w-[38px] items-center justify-center rounded-full border border-black/[0.14] bg-card text-ink-soft transition-colors hover:border-accent hover:text-accent"
-          >
+          <EmailMenu className="sketch-icon-btn float-icon flex h-[38px] w-[38px] items-center justify-center rounded-full border border-black/[0.14] bg-card text-ink-soft transition-colors hover:border-accent hover:text-accent">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
               <path d="M4 4h16v16H4z" />
               <path d="m4 4 8 8 8-8" />
             </svg>
-          </a>
+          </EmailMenu>
           <a
             href={profile.github}
             target="_blank"
@@ -52,4 +47,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
