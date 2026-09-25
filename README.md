@@ -25,15 +25,24 @@ The contact form posts to `app/api/contact/route.ts`, which sends the message to
 
 1. Sign up at [resend.com](https://resend.com) (free tier is enough for a portfolio's traffic).
 2. Create an API key from the Resend dashboard.
-3. Copy `.env.example` to `.env` and paste the key in:
-   ```bash
-   cp .env.example .env
+3. Create a file named `.env.local` in the project root (git already ignores it) and add one line:
    ```
-4. Restart `npm run dev`, or if deployed, add `RESEND_API_KEY` to your hosting provider's environment variables.
+   RESEND_API_KEY=your_key_here
+   ```
+4. Restart `npm run dev`. On Vercel, open the project, then Settings, then Environment Variables, add `RESEND_API_KEY` for Production and Preview, and redeploy.
 
-By default the route sends from Resend's shared `onboarding@resend.dev` address, which works immediately with no domain setup. If you want the email to come from your own domain (e.g. `hello@neerajkumar.dev`), verify that domain in the Resend dashboard and update the `from` field in `app/api/contact/route.ts`.
+By default the route sends from Resend's shared `onboarding@resend.dev` address, which works immediately with no domain setup. If you want the email to come from your own domain (e.g. `hello@neerajkumar.dev`), verify that domain in the Resend dashboard, then set `CONTACT_FROM_EMAIL` (for example `Neeraj <hello@yourdomain.com>`) as an environment variable.
+
+The route also has a hidden honeypot field, field length limits and a simple rate limit of 5 messages per 10 minutes per IP.
 
 Every submission's reply-to is set to the sender's email, so hitting Reply in Gmail goes straight back to them.
+
+## Scripts
+
+- `npm run lint` runs ESLint.
+- `npm run format:check` runs Prettier in check mode. `npm run format` fixes files.
+- `npm test` runs the Vitest tests (`app/api/contact/route.test.ts`, `lib/content.test.ts`).
+- `.github/workflows/ci.yml` runs lint, format check, tests and build on every push and pull request.
 
 ## Deploying
 
@@ -42,7 +51,7 @@ This is a standard Next.js app. The easiest path is [Vercel](https://vercel.com)
 1. Push this repo to GitHub.
 2. Import the repo in Vercel.
 3. Add the `RESEND_API_KEY` environment variable in the Vercel project settings.
-4. Deploy.
+4. Deploy. The site URL for sharing tags comes from Vercel automatically. Set `NEXT_PUBLIC_SITE_URL` only if you add a custom domain.
 
 ## Tech stack
 
