@@ -1,6 +1,5 @@
 export const profile = {
   name: "Neeraj Kumar",
-  role: "Full Stack Developer, MERN",
   location: "Karachi, PK",
   email: "neeraj.dsu@gmail.com",
   github: "https://github.com/neeraj-kumarr",
@@ -28,10 +27,10 @@ export const experienceYears = (now: Date = new Date()) => {
 };
 
 export const summary =
-  "Full stack developer with proven experience building web applications and data platforms using React.js, Node.js and Express.js. Skilled in developing secure REST APIs, automated data pipelines, real-time portalsand RBAC admin platforms. Adept at designing reusable components, integrating APIs, optimizing performance, and collaborating with clients and product teams to deliver impactful solutions.";
+  "Full stack developer with proven experience building web applications and data platforms using React.js, Node.js and Express.js. Skilled in developing secure REST APIs, automated data pipelines, real-time dashboards and RBAC admin platforms. Adept at designing reusable components, integrating APIs, optimizing performance, and collaborating with clients and product teams to deliver impactful solutions.";
 
 export const heroNote =
-  "Over two years deep in React, Node and Express at Pakistan Agriculture Research, building RBAC platforms, secure APIs and portalspeople actually rely on. This page is my running notebook, not a highlight reel.";
+  "Full-Stack Engineer @ PAR, building secure RBAC platforms and data portals people actually rely on. Polymath mindset, PSX obsessive outside work. Building something AI native? Let's talk.";
 
 export type Project = {
   title: string;
@@ -53,11 +52,11 @@ export const projects: Project[] = [
     date: "Jun 2024 to Present",
     status: "Live",
     description:
-      "Dynamic, role-aware data APIs and a revamped React landing page. Mixpanel and ApexCharts turn raw agricultural data into something people actually read. Organic traffic up 40%.",
+      "Dynamic, role-aware data APIs and a revamp of the PAR website's 50+ pages in React. Mixpanel and ApexCharts turn raw data into something people actually read. Organic traffic up 40%.",
     points: [
       "Built backend APIs for dynamic filtering of data queries and role-based content, using Node.js and MongoDB.",
-      "Revamped the landing page with a modern React UI, increasing organic traffic by 40%.",
-      "Integrated Mixpanel for behavioural analytics and ApexCharts for real-time market data visualisations.",
+      "Revamped 50+ pages of the PAR website with a modern React UI, increasing organic traffic by 40%.",
+      "Integrated Mixpanel for behavioural analytics and ApexCharts for real-time data visualisations.",
     ],
     tags: ["Node.js", "MongoDB", "ApexCharts", "Mixpanel"],
     liveUrl: "https://par.com.pk",
@@ -177,7 +176,7 @@ export const timeline: TimelineItem[] = [
     title: "Agri Data Portal",
     date: "Jun 2024 to Present",
     description:
-      "Backend APIs for dynamic, role-aware data queries, paired with a revamped landing page that lifted organic traffic by 40%. Mixpanel and ApexCharts turned raw agricultural data into something people actually read.",
+      "Backend APIs for dynamic, role-aware data queries, paired with a revamp of the PAR website's 50+ pages that lifted organic traffic by 40%. Mixpanel and ApexCharts turned raw data into something people actually read.",
   },
   {
     title: "Admin Portal",

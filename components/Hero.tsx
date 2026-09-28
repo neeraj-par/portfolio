@@ -35,7 +35,6 @@ const Hero = () => {
             </h1>
 
             <span className="inline-block font-caveat text-[19px] font-bold text-accent md:text-[24px]">
-              {profile.role}
               <Squiggle className="mx-auto mt-0.5 !max-w-none md:mx-0" />
             </span>
 
