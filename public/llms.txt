@@ -13,7 +13,7 @@
 ## Projects
 
 - Agri Data Portal (live, https://par.com.pk): role-aware data APIs, a React landing page, Mixpanel analytics and ApexCharts market data visualisations.
-- Admin Panel (internal): RBAC admin panel with Node/Express APIs, Python scrapers and node-cron automation.
+- Admin Portal (internal): RBAC admin portal with Node/Express APIs, Python scrapers and node-cron automation.
 - News Bulletin Automation (internal): multi-source news pipeline delivering bulletins through Amazon SES.
 
 ## Links

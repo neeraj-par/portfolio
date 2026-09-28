@@ -64,13 +64,13 @@ export const projects: Project[] = [
     videoId: "zIICfTfNGG0",
   },
   {
-    title: "Admin Panel",
+    title: "Admin Portal",
     date: "Jun 2025 to Present",
     status: "Internal",
     description:
-      "RBAC admin panel backed by secure Node/Express APIs. Python scrapers and node-cron replaced manual data entry outright. Team efficiency up 50%.",
+      "RBAC admin portal backed by secure Node/Express APIs. Python scrapers and node-cron replaced manual data entry outright. Team efficiency up 50%.",
     points: [
-      "Built an RBAC admin panel to manage data and operations, improving team efficiency by 50%.",
+      "Built an RBAC admin portal to manage data and operations, improving team efficiency by 50%.",
       "Designed and integrated secure APIs for data management using MongoDB and Node.js/Express.js.",
       "Automated data collection with Python scrapers and node-cron, removing manual entry.",
     ],
@@ -180,10 +180,10 @@ export const timeline: TimelineItem[] = [
       "Backend APIs for dynamic, role-aware data queries, paired with a revamped landing page that lifted organic traffic by 40%. Mixpanel and ApexCharts turned raw agricultural data into something people actually read.",
   },
   {
-    title: "Admin Panel",
+    title: "Admin Portal",
     date: "Jun 2025 to Present",
     description:
-      "An RBAC admin panel that lifted team efficiency by 50%, backed by secure Node/Express APIs and Python scrapers that replaced manual data entry outright.",
+      "An RBAC admin portal that lifted team efficiency by 50%, backed by secure Node/Express APIs and Python scrapers that replaced manual data entry outright.",
   },
   {
     title: "News Bulletin Automation",
