@@ -46,7 +46,7 @@ const Portfolio = () => {
                   {project.videoId && (
                     <iframe
                       className="pointer-events-none absolute inset-0 h-full w-full scale-[1.5]"
-                      src={`https://www.youtube.com/embed/${project.videoId}?autoplay=1&mute=1&loop=1&playlist=${project.videoId}&controls=0&disablekb=1&fs=0&iv_load_policy=3&modestbranding=1&playsinline=1&rel=0&start=15&end=50`}
+                      src={`https://www.youtube.com/embed/${project.videoId}?autoplay=1&mute=1&loop=1&playlist=${project.videoId}&controls=0&disablekb=1&fs=0&iv_load_policy=3&modestbranding=1&playsinline=1&rel=0&start=18&end=50`}
                       title={`${project.title} preview`}
                       allow="autoplay; encrypted-media"
                       referrerPolicy="strict-origin-when-cross-origin"
