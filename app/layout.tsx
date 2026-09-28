@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora, Caveat, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { profile, siteUrl, summary, toolkit } from "@/lib/content";
 import MotionProvider from "@/components/ui/MotionProvider";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const sora = Sora({
@@ -118,6 +119,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
     <body className="bg-paper text-ink font-plex antialiased">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <MotionProvider>{children}</MotionProvider>
+      <Analytics />
     </body>
   </html>
 );
