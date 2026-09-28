@@ -44,6 +44,11 @@ describe("POST /api/contact", () => {
     expect(res.status).toBe(400);
   });
 
+  it("rejects a request body over the size cap before parsing it", async () => {
+    const res = await POST(makeRequest({ ...valid, message: "x".repeat(25000) }));
+    expect(res.status).toBe(413);
+  });
+
   it("silently drops honeypot submissions without sending", async () => {
     const res = await POST(makeRequest({ ...valid, hp_trap: "http://spam.example" }));
     expect(res.status).toBe(200);

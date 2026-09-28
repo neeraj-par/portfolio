@@ -6,6 +6,8 @@ const TO_EMAIL = "neeraj.dsu@gmail.com";
 const FROM = process.env.CONTACT_FROM_EMAIL ?? "Portfolio Contact <onboarding@resend.dev>";
 
 const LIMITS = { name: 100, email: 254, subject: 150, message: 5000 };
+// Rough ceiling on raw request body size, well above the combined LIMITS fields plus JSON overhead.
+const MAX_BODY_BYTES = 20_000;
 const RATE_MAX = 5;
 const RATE_WINDOW_MS = 10 * 60 * 1000;
 
@@ -51,9 +53,15 @@ export const POST = async (req: NextRequest) => {
     return NextResponse.json({ error: "Too many messages, please try again later" }, { status: 429 });
   }
 
+  // Measure actual bytes, not a client-supplied content-length header (chunked requests omit it anyway).
+  const raw = await req.text();
+  if (raw.length > MAX_BODY_BYTES) {
+    return NextResponse.json({ error: "Request body too large" }, { status: 413 });
+  }
+
   let body: Record<string, unknown>;
   try {
-    body = await req.json();
+    body = JSON.parse(raw);
     if (!body || typeof body !== "object") throw new Error("not an object");
   } catch {
     return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
