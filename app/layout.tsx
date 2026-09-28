@@ -3,7 +3,6 @@ import { Sora, Caveat, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { profile, siteUrl, summary, toolkit } from "@/lib/content";
 import MotionProvider from "@/components/ui/MotionProvider";
 import { Analytics } from "@vercel/analytics/next";
-// @ts-expect-error Next.js processes this stylesheet as a side-effect import.
 import "./globals.css";
 
 const sora = Sora({
