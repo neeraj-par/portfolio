@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { profile, heroNote, experienceYears } from "@/lib/content";
+import { profile, heroNote } from "@/lib/content";
 import { StarDoodle, TargetDoodle } from "./ui/Doodles";
 import Squiggle from "./ui/Squiggle";
 
@@ -39,8 +39,9 @@ const Hero = () => {
               <Squiggle className="mx-auto mt-0.5 !max-w-none md:mx-0" />
             </span>
 
-            <p className="mx-auto mt-4 max-w-[330px] text-[14.5px] leading-[1.58] text-ink-soft md:mx-0 md:mt-5 md:max-w-[520px] md:text-[16px]">
+            <p className="mx-auto mt-4 max-w-[330px] text-[14.5px] font-medium leading-[1.58] text-accent md:mx-0 md:mt-5 md:max-w-[520px] md:text-[16px]">
               {heroNote}
+              <span aria-hidden className="ml-1">✦</span>
             </p>
 
             <div className="mx-auto mt-7 grid max-w-[260px] grid-cols-1 gap-3 md:mx-0 md:flex md:max-w-none md:flex-wrap md:justify-start md:gap-3.5">
@@ -84,7 +85,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative order-1 flex min-h-[382px] justify-center md:order-2">
+          <div className="relative order-1 flex min-h-[320px] justify-center md:order-2">
             <motion.div
               initial={{ opacity: 0, rotate: -8, y: 12 }}
               animate={{ opacity: 1, rotate: 3, y: 0 }}
@@ -103,50 +104,10 @@ const Hero = () => {
               <p className="mt-3 text-center font-caveat text-xl text-ink-soft">Neeraj</p>
             </motion.div>
 
-            <StatCard
-              className="bottom-2 left-[calc(50%-98px)] [--float-rotate:-4deg]"
-              num={`${experienceYears()}+`}
-              label="Years Exp."
-              delay={0.3}
-            />
-            <StatCard
-              className="bottom-2 right-[calc(50%-98px)] [--float-rotate:4deg]"
-              num="3+"
-              label="Shipped"
-              delay={0.45}
-            />
           </div>
         </div>
       </div>
     </section>
-  );
-};
-
-const StatCard = ({
-  className,
-  num,
-  label,
-  delay,
-}: {
-  className: string;
-  num: string;
-  label: string;
-  delay: number;
-}) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, delay }}
-      whileHover={{ y: -3 }}
-      className={`card float-card absolute z-10 min-w-[82px] px-3 py-2.5 text-center md:min-w-[92px] md:px-4 md:py-3 ${className}`}
-    >
-      {/* Years Exp. depends on today's date, which can differ from the static build */}
-      <div suppressHydrationWarning className="font-sora text-lg font-bold md:text-xl">
-        {num}
-      </div>
-      <div className="mt-0.5 font-mono text-[9px] uppercase tracking-wide text-ink-faint md:text-[10.5px]">{label}</div>
-    </motion.div>
   );
 };
 

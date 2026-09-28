@@ -35,7 +35,7 @@ const plexMono = IBM_Plex_Mono({
 
 const TITLE = "Neeraj Kumar | Full Stack Developer (MERN), Karachi, Pakistan";
 const DESCRIPTION =
-  "Neeraj Kumar is a Full Stack Developer (MERN) in Karachi, Pakistan. He builds RBAC admin platforms, secure REST APIs and real-time dashboards with React, Node.js, Express and MongoDB at Pakistan Agriculture Research.";
+  "Neeraj Kumar is a Full Stack Developer (MERN) in Karachi, Pakistan. He builds RBAC admin platforms, secure REST APIs and real-time portalswith React, Node.js, Express and MongoDB at Pakistan Agriculture Research.";
 
 export const metadata: Metadata = {
   title: TITLE,

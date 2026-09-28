@@ -26,7 +26,7 @@ const OpengraphImage = () =>
       <div style={{ fontSize: 110, fontWeight: 800, lineHeight: 1.05 }}>Neeraj Kumar</div>
       <div style={{ fontSize: 46, color: "#B0502F", marginTop: 12 }}>Full Stack Developer, MERN</div>
       <div style={{ fontSize: 30, color: "#5B564A", marginTop: 36 }}>
-        RBAC platforms, secure APIs and dashboards. Karachi, PK.
+        RBAC platforms, secure APIs and portals. Karachi, PK.
       </div>
     </div>,
     size

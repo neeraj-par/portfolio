@@ -1,6 +1,6 @@
 # Neeraj Kumar
 
-> Neeraj Kumar is a Full Stack Developer (MERN) based in Karachi, Pakistan. Since June 2024 he has worked at Pakistan Agriculture Research (https://par.com.pk), building RBAC admin platforms, secure REST APIs, automated data pipelines and real-time dashboards with React, Node.js, Express and MongoDB. He holds a B.S. in Computer Science from DHA Suffa University (2019 to 2024) and is open to full-time roles.
+> Neeraj Kumar is a Full Stack Developer (MERN) based in Karachi, Pakistan. Since June 2024 he has worked at Pakistan Agriculture Research (https://par.com.pk), building RBAC admin platforms, secure REST APIs, automated data pipelines and real-time portalswith React, Node.js, Express and MongoDB. He holds a B.S. in Computer Science from DHA Suffa University (2019 to 2024) and is open to full-time roles.
 
 ## Key facts
 
@@ -12,9 +12,9 @@
 
 ## Projects
 
-- PAR Agri Data Portal (live, https://par.com.pk): role-aware data APIs, a React landing page, Mixpanel analytics and ApexCharts market data visualisations.
-- PAR Admin Panel (internal): RBAC admin panel with Node/Express APIs, Python scrapers and node-cron automation.
-- PAR News Bulletin Automation (internal): multi-source news pipeline delivering bulletins through Amazon SES.
+- Agri Data Portal (live, https://par.com.pk): role-aware data APIs, a React landing page, Mixpanel analytics and ApexCharts market data visualisations.
+- Admin Panel (internal): RBAC admin panel with Node/Express APIs, Python scrapers and node-cron automation.
+- News Bulletin Automation (internal): multi-source news pipeline delivering bulletins through Amazon SES.
 
 ## Links
 

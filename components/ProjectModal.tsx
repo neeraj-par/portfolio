@@ -9,7 +9,7 @@ const VideoFacade = ({ id, title }: { id: string; title: string }) => (
   <div className="relative mb-5 aspect-video overflow-hidden rounded-md border border-black/[0.14] bg-ink">
     <iframe
       className="absolute inset-0 h-full w-full"
-      src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&rel=0&playsinline=1`}
+      src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&rel=0&playsinline=1&start=15&end=50`}
       title={`${title} walkthrough`}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerPolicy="strict-origin-when-cross-origin"

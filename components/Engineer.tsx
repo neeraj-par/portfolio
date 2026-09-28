@@ -35,8 +35,8 @@ const Engineer = () => {
 
               <div className="mt-5 grid grid-cols-1 gap-3.5 border-t border-dashed border-black/[0.14] pt-5 sm:grid-cols-2">
                 <InfoRow label="Name" value={profile.name} icon="user" />
-                <InfoRow label="Email" value={profile.email} icon="mail" />
-                <InfoRow label="Studio" value={profile.location} icon="pin" />
+                <InfoRow label="Email" value={profile.email} icon="mail" href={`mailto:${profile.email}`} />
+                <InfoRow label="Studio" value={profile.location} icon="pin" href={profile.mapsUrl} external />
                 <InfoRow label="Response Time" value="Usually within a day" icon="clock" />
               </div>
             </div>
@@ -74,7 +74,19 @@ const ICONS: Record<string, React.ReactNode> = {
   ),
 };
 
-const InfoRow = ({ label, value, icon }: { label: string; value: string; icon: string }) => {
+const InfoRow = ({
+  label,
+  value,
+  icon,
+  href,
+  external,
+}: {
+  label: string;
+  value: string;
+  icon: string;
+  href?: string;
+  external?: boolean;
+}) => {
   return (
     <div className="flex items-center gap-2.5 text-[13.5px]">
       <svg viewBox="0 0 24 24" fill="none" stroke="#B0502F" strokeWidth={2} className="float-icon h-4 w-4 shrink-0">
@@ -82,7 +94,18 @@ const InfoRow = ({ label, value, icon }: { label: string; value: string; icon: s
       </svg>
       <div>
         <span className="block font-mono text-[9.5px] uppercase tracking-wide text-ink-faint">{label}</span>
-        {value}
+        {href ? (
+          <a
+            href={href}
+            target={external ? "_blank" : undefined}
+            rel={external ? "noopener noreferrer" : undefined}
+            className="text-ink underline-offset-2 hover:text-accent hover:underline"
+          >
+            {value}
+          </a>
+        ) : (
+          value
+        )}
       </div>
     </div>
   );

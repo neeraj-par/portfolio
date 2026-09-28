@@ -18,7 +18,7 @@ export const siteUrl =
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
     : "http://localhost:3000");
 
-// Start of the PAR role, used to compute years of experience so the hero never goes stale.
+// Start of the role, used to compute years of experience so the hero never goes stale.
 const CAREER_START = new Date(2024, 5, 1);
 
 // Whole years of experience since CAREER_START.
@@ -28,10 +28,10 @@ export const experienceYears = (now: Date = new Date()) => {
 };
 
 export const summary =
-  "Full stack developer with proven experience building web applications and data platforms using React.js, Node.js and Express.js. Skilled in developing secure REST APIs, automated data pipelines, real-time dashboards and RBAC admin platforms. Adept at designing reusable components, integrating APIs, optimizing performance, and collaborating with clients and product teams to deliver impactful solutions.";
+  "Full stack developer with proven experience building web applications and data platforms using React.js, Node.js and Express.js. Skilled in developing secure REST APIs, automated data pipelines, real-time portalsand RBAC admin platforms. Adept at designing reusable components, integrating APIs, optimizing performance, and collaborating with clients and product teams to deliver impactful solutions.";
 
 export const heroNote =
-  "Over two years deep in React, Node and Express at Pakistan Agriculture Research, building RBAC platforms, secure APIs and dashboards people actually rely on. This page is my running notebook, not a highlight reel.";
+  "Over two years deep in React, Node and Express at Pakistan Agriculture Research, building RBAC platforms, secure APIs and portalspeople actually rely on. This page is my running notebook, not a highlight reel.";
 
 export type Project = {
   title: string;
@@ -49,7 +49,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "PAR Agri Data Portal",
+    title: "Agri Data Portal",
     date: "Jun 2024 to Present",
     status: "Live",
     description:
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     videoId: "zIICfTfNGG0",
   },
   {
-    title: "PAR Admin Panel",
+    title: "Admin Panel",
     date: "Jun 2025 to Present",
     status: "Internal",
     description:
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     },
   },
   {
-    title: "PAR News Bulletin Automation",
+    title: "News Bulletin Automation",
     date: "Jan 2026 to Feb 2026",
     status: "Internal",
     description:
@@ -174,19 +174,19 @@ export type TimelineItem = {
 
 export const timeline: TimelineItem[] = [
   {
-    title: "PAR Agri Data Portal",
+    title: "Agri Data Portal",
     date: "Jun 2024 to Present",
     description:
       "Backend APIs for dynamic, role-aware data queries, paired with a revamped landing page that lifted organic traffic by 40%. Mixpanel and ApexCharts turned raw agricultural data into something people actually read.",
   },
   {
-    title: "PAR Admin Panel",
+    title: "Admin Panel",
     date: "Jun 2025 to Present",
     description:
       "An RBAC admin panel that lifted team efficiency by 50%, backed by secure Node/Express APIs and Python scrapers that replaced manual data entry outright.",
   },
   {
-    title: "PAR News Bulletin Automation",
+    title: "News Bulletin Automation",
     date: "Jan 2026 to Feb 2026",
     description:
       "A pipeline that pulls from multiple sources, condenses it 60 to 70% into publication-ready bulletins, and ships them out on schedule through Amazon SES.",
